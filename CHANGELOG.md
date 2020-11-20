@@ -16,6 +16,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Wide characters sometimes being cut off
 - Preserve vi mode across terminal `reset`
 
+### Added
+
+- `HideOtherApplications` key binding action, bound to `cmd + alt + h` on macOS
+
 ## 0.6.0
 
 ### Packaging

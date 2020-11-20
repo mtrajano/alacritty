@@ -167,6 +167,9 @@ pub enum Action {
     #[cfg(target_os = "macos")]
     ToggleSimpleFullscreen,
 
+    /// Hide other application windows.
+    HideOtherApplications,
+
     /// Clear active selection.
     ClearSelection,
 
@@ -530,6 +533,7 @@ pub fn platform_key_bindings() -> Vec<KeyBinding> {
         K, ModifiersState::LOGO, ~TermMode::VI; Action::Esc("\x0c".into());
         V, ModifiersState::LOGO, ~TermMode::VI; Action::Paste;
         N, ModifiersState::LOGO; Action::SpawnNewInstance;
+        H, ModifiersState::LOGO | ModifiersState::ALT; Action::HideOtherApplications;
         F, ModifiersState::CTRL | ModifiersState::LOGO; Action::ToggleFullscreen;
         K, ModifiersState::LOGO; Action::ClearHistory;
         C, ModifiersState::LOGO; Action::Copy;
